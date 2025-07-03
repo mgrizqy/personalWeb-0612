@@ -45,6 +45,8 @@ const AboutSection = () => {
 
         <section id="about" className=" py-24" >
 
+        <AnimatedSection>
+
             <div className="w-full max-w-5xl mx-auto   " >
 
                 <h2 className="mb-2 text-center">
@@ -63,7 +65,7 @@ const AboutSection = () => {
                     <div className="md:col-span-2 relative w-full  h-80 md:h-[225px] group flex items-center justify-center ">
 
                         <div className="absolute w-[85%] h-[85%] rounded-lg border-2 border-dashed border-[var(--greenYellowish)]/25 transition-all duration-300 rotate-3 group-hover:rotate-6 z-10"></div>
-                        {/* main layer */}
+                       
                         <div className="absolute w-[85%] h-[85%] rounded-lg  bg-cover bg-center bg-gray-900 shadow-2xl transition-all duration-300 -rotate-3 group-hover:-rotate-1 z-0"
                             style={{ backgroundImage: "url('/illustration-dark.png')" }}>
 
@@ -90,6 +92,7 @@ const AboutSection = () => {
                 </div>
 
             </div>
+            </AnimatedSection>
             <AnimatedSection>
 
             <div className='flex flex-col items-center mb-15 mt-30 md:mb-0'>
@@ -113,13 +116,13 @@ const AboutSection = () => {
                     <h3 className=' text-3xl font-bold flex items-center gap-5'>  My Key Values</h3>
                 </div>
 
-                <div className='w-[67%] min-w-[500px] md:min-w-[800px] grid grid-cols-1 md:grid-cols-2 mb-20 ' >
+                <div className='w-[67%]  md:min-w-[800px] grid grid-cols-1 md:grid-cols-2 mb-20 ' >
 
                     <div className='col-span-1  flex items-center justify-center p-2'>
 
 
 
-                        <ValueCard icon={Eye} title='Attention to detail' />
+                        <ValueCard icon={Eye} title='Attention to detail'/>
 
 
 

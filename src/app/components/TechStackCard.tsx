@@ -1,4 +1,3 @@
-// A new, more dynamic TechStackCard proposal
 
 
     

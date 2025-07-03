@@ -1,7 +1,7 @@
-// components/ContactSection.tsx
+
 
 import { Send } from 'lucide-react';
-// import SectionDivider from './SectionDivider';
+
 
 export default function ContactSection() {
     return (
@@ -14,15 +14,15 @@ export default function ContactSection() {
                 </p>
             </div>
 
-            {/* The Form Container */}
+            
             <div className="max-w-3xl mx-auto bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm">
                 
-                {/* --- IMPORTANT: Replace the action URL with your Formspree endpoint --- */}
+               
                 <form action="https://formspree.io/f/YOUR_UNIQUE_ID" method="POST">
 
-                    {/* Grid for Name and Email fields */}
+                    
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                        {/* Name Field */}
+                        
                         <div>
                             <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
                             <input 
@@ -33,7 +33,7 @@ export default function ContactSection() {
                                 className="form-input"
                             />
                         </div>
-                        {/* Email Field */}
+                        
                         <div>
                             <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
                             <input 
@@ -46,7 +46,7 @@ export default function ContactSection() {
                         </div>
                     </div>
 
-                    {/* Message Field */}
+                    
                     <div className="mb-6">
                         <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">Message</label>
                         <textarea 
@@ -58,7 +58,7 @@ export default function ContactSection() {
                         ></textarea>
                     </div>
 
-                    {/* Submit Button */}
+                   
                     <div className="text-center">
                         <button 
                             type="submit" 

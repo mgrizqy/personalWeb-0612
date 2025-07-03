@@ -1,4 +1,3 @@
-// components/TestimonialsSection.tsx
 
 'use client';
 
@@ -7,7 +6,6 @@ import { MessageSquare } from 'lucide-react';
 import { useDraggableMarquee } from '../hooks/useDraggableMarquee';
 
 
-// --- Placeholder Data ---
 const testimonials = [
     {
         id: 1,
@@ -29,7 +27,6 @@ const testimonials = [
     }
 ];
 
-// --- Reusable Card Sub-Component ---
 const TestimonialCard = ({ quote, author, title }: { quote: string, author: string, title: string }) => (
     <div className="flex-shrink-0 w-[350px] md:w-[400px] border border-white/10 rounded-lg p-8 bg-[#1d1c22] mx-4 flex flex-col">
         <MessageSquare className="w-8 h-8 text-[#adff30] mb-4" />
@@ -41,7 +38,6 @@ const TestimonialCard = ({ quote, author, title }: { quote: string, author: stri
     </div>
 );
 
-// --- Main Section Component ---
 export default function TestimonialsSection() {
     const marqueeRef = useRef<HTMLDivElement>(null);
 
@@ -50,7 +46,6 @@ export default function TestimonialsSection() {
     // marqueeRef.current!.focus();
     const isDragging  = useDraggableMarquee(test);
 
-    // Duplicate the testimonials array to create a seamless loop
     const loopedTestimonials = [...testimonials, ...testimonials];
 
     return (

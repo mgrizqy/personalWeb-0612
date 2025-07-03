@@ -8,61 +8,58 @@ import HeroSection from './components/HeroSection';
 import SectionDivider from './components/SectionDivider';
 import TestimonialsSection from './components/TestimonialsSection';
 import ContactSection from './components/ContactSection';
-// import AnimatedSection from './components/AnimationSection';
+import AnimatedSection from './components/AnimationSection';
 
 
 
-// --- Reusable Components (defined here for simplicity) ---
 
-
-// --- Main Page Component ---
 
 
 export default function Home() {
 
   return (
-    <main className="flex flex-col items-center px-4 md:px-8">
+    <main className="flex flex-col items-center px-4 md:px-8 ">
 
-      <div className='w-full md:max-w-[1300px]'>
-        {/* <AnimatedSection> */}
+      <div className='w-full md:max-w-[1300px] '>
+        <AnimatedSection>
         <HeroSection></HeroSection>
-        {/* </AnimatedSection> */}
+        </AnimatedSection>
 
-         {/* <AnimatedSection> */}
+         <AnimatedSection>
         <SectionDivider />
           
-        {/* </AnimatedSection> */}
+        </AnimatedSection>
 
         {/* <AnimatedSection> */}
         <AboutSection></AboutSection>
         {/* </AnimatedSection> */}
 
-        {/* <AnimatedSection> */}
+        <AnimatedSection>
         <SectionDivider />
 
-        {/* </AnimatedSection> */}
+        </AnimatedSection>
 
-        {/* <AnimatedSection> */}
+        <AnimatedSection>
         <ProjectsSection></ProjectsSection>
-        {/* </AnimatedSection> */}
+        </AnimatedSection>
 
-        {/* <AnimatedSection> */}
+        <AnimatedSection>
         <SectionDivider></SectionDivider>
           
-        {/* </AnimatedSection> */}
+        </AnimatedSection>
 
-        {/* <AnimatedSection> */}
+        <AnimatedSection>
         <TestimonialsSection></TestimonialsSection>
-        {/* </AnimatedSection> */}
+        </AnimatedSection>
 
-        {/* <AnimatedSection> */}
+        <AnimatedSection>
         <SectionDivider></SectionDivider>
           
-        {/* </AnimatedSection> */}
+        </AnimatedSection>
 
-        {/* <AnimatedSection> */}
+        <AnimatedSection>
         <ContactSection></ContactSection>
-        {/* </AnimatedSection> */}
+        </AnimatedSection>
         
 
     

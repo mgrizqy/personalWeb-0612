@@ -1,4 +1,3 @@
-// hooks/useDraggableMarquee.ts
 import { useState, useEffect, RefObject } from 'react';
 
 export function useDraggableMarquee(ref: RefObject<HTMLDivElement> | null) {
@@ -12,7 +11,7 @@ export function useDraggableMarquee(ref: RefObject<HTMLDivElement> | null) {
 
         const onMouseDown = (e: MouseEvent) => {
             setIsDragging(true);
-            marquee.classList.add('active-drag'); // For cursor styling
+            marquee.classList.add('active-drag'); 
             setStartX(e.pageX - marquee.offsetLeft);
             setScrollLeft(marquee.scrollLeft);
         };
@@ -24,7 +23,7 @@ export function useDraggableMarquee(ref: RefObject<HTMLDivElement> | null) {
             if (!isDragging) return;
             e.preventDefault();
             const x = e.pageX - marquee.offsetLeft;
-            const walk = (x - startX) * 2; // The multiplier '2' makes dragging faster
+            const walk = (x - startX) * 2; 
             marquee.scrollLeft = scrollLeft - walk;
         };
 

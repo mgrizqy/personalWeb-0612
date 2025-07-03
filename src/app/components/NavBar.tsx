@@ -1,5 +1,3 @@
-// components/Navbar.tsx
-
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -22,7 +20,7 @@ export default function Navbar() {
     useEffect(() => {
         const handleScroll = () => {
             const sections = navLinks.map(link => document.getElementById(link.href.substring(1)));
-            const scrollPosition = window.scrollY + 150; // Offset to trigger sooner
+            const scrollPosition = window.scrollY + 150; 
 
             for (const section of sections) {
                 if (section && scrollPosition >= section.offsetTop && scrollPosition < section.offsetTop + section.offsetHeight) {
@@ -40,11 +38,11 @@ export default function Navbar() {
         <li>
             <a 
                 href={href}
-                onClick={() => setIsMenuOpen(false)} // Close menu on link click
+                onClick={() => setIsMenuOpen(false)} 
                 className="relative block font-bold transition-colors text-gray-300 hover:text-white"
             >
                 {label}
-                {/* The animated underline */}
+                
                 <span className={`
                     absolute bottom-[-4px] left-0 h-[3px] bg-[#adff30] w-full
                     transition-transform duration-300 ease-out
@@ -59,10 +57,8 @@ export default function Navbar() {
         <>
         <nav className="fixed w-full h-[85px] bg-[#111015]/80 backdrop-blur-sm flex items-center justify-center z-50 border-b border-white/5">
             
-            {/* Inner container for content */}
             <div className="flex items-center justify-between w-full max-w-[1700px] px-4 md:px-8">
                 
-                {/* Logo */}
                 <a href="#home" className="h-[40px] px-3 rounded-lg flex items-center justify-center 
                     border-2 border-dashed border-[#adff30]/20 text-[#adff30] 
                     hover:bg-[#adff30] hover:text-black hover:scale-110  
@@ -70,7 +66,6 @@ export default function Navbar() {
                     <p className='tracking-wide font-extrabold drop-shadow-[0_0_8px_rgba(173,255,48,0.17)]'>{"<e/>"}</p>
                 </a>
 
-                {/* Desktop Menu */}
                 <div className="hidden md:flex items-center gap-8">
                     <ul className="flex items-center gap-9">
                         {navLinks.map(link => <NavLink key={link.href} {...link} />)}
@@ -85,24 +80,20 @@ export default function Navbar() {
                     </button>
                 </div>
                 
-                {/* Mobile Menu Button */}
                 <div className="md:hidden flex items-center gap-4">
                     <div className="w-[40px] h-[40px] border border-white/20 flex items-center justify-center rounded-full cursor-pointer hover:bg-white/10 transition-colors">
                         <Sun size={20} />
                     </div>
-{/* Custom Mobile Menu Button */}
 <button 
     onClick={() => setIsMenuOpen(!isMenuOpen)} 
     className="z-50 w-8 h-8 flex flex-col items-end justify-center gap-[6px] group"
 >
     {isMenuOpen ? (
-        // The "X" shape (two rotated divs)
         <div className="relative w-full h-full">
             <span className="block w-full h-0.5 bg-[#adff30] absolute top-1/2 transition-transform duration-300 rotate-45"></span>
             <span className="block w-full h-0.5 bg-[#adff30] absolute top-1/2 transition-transform duration-300 -rotate-45"></span>
         </div>
     ) : (
-        // Your custom hamburger shape
         <>
             <span className="block w-full h-0.5 bg-white transition-all duration-300 group-hover:bg-[#adff30]"></span>
             <span className="block w-1/2 h-0.5 bg-white transition-all duration-300 group-hover:bg-[#adff30] group-hover:w-full"></span>
@@ -114,11 +105,10 @@ export default function Navbar() {
 
             </div>
 
-{/* Mobile Menu Panel - Glassy & More Compact */}
 <div className={`
-    md:hidden fixed top-0 right-0 h-screen w-1/2 max-w-[220px] // Smaller width
-    bg-[#111015]/90 backdrop-blur-lg // Glassy effect
-    border-l border-white/10 // Left border for definition
+    md:hidden fixed top-0 right-0 h-screen w-1/2 max-w-[150px] 
+    bg-[#111015]/90 backdrop-blur-lg 
+    border-l border-white/10 
     transform transition-transform duration-300 ease-in-out z-40
     ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}
 `}>

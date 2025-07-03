@@ -55,6 +55,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background:  #111015;
+    --foreground: #111015;
     --foreground: #ededed;
   }
 }
@@ -165,6 +166,7 @@ animation: blip 2s  infinite;
 }
 
 .marquee-container {
+  
   position: relative;
   width: 100vw;
   max-width: 100%;
