@@ -185,7 +185,7 @@ animation: blip 2s  infinite;
 }
 
 .marquee-content {
-  display: flex;
+  display: flex;  
   width: max-content;
   animation: marquee 60s linear infinite;
 }
