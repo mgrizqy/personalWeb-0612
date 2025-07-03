@@ -43,7 +43,8 @@
 
 
 :root {
-  --background: #ffffff;
+  /* --background: #ffffff; */
+  --background: #111015;
   --foreground: #171717;
   --darkColor : #1d1c22;
   --grayishWhite : #e7e7e7;
@@ -56,13 +57,13 @@
   :root {
     --background:  #111015;
     --foreground: #111015;
-    --foreground: #ededed;
+    /* --foreground: #ededed; */
   }
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
+  color: #ededed;
   font-family: "JetBrains Mono", sans-serif;
   background-image: radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1.4px);
   background-size: 25px 25px;
