@@ -47,7 +47,7 @@ export default function AnimatedSection({
   const viewportSettings = {
     once: false,
   
-    amount: isMobile ? 0.2 : 0.65, 
+    amount: isMobile ? 0.1 : 0.65, 
   };
 
 

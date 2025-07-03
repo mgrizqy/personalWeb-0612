@@ -23,7 +23,7 @@ export default function MyJourney() {
                         <div className="bg-[var(--darkColor)]/20 hover:bg-[var(--darkColor)]/40 border hover:border-[var(--greenYellowish)]/30 transition-all duration-300 border-white/10 rounded-lg p-6">
                             <p className="mb-2"><span className="text-neutral-400">Current</span></p>
                             <p className="mb-2"><span className="text-xl font-bold text-[var(--greenYellowish)]">Transition to Tech: Full-Stack Bootcamp</span></p>
-                            <p className="text-sm">Deeply engaged in an intensive, project-driven program focused on building modern, full-stack applications with React, Next.js, Node.js, and advanced database concepts.</p>
+                            <p className="text-sm tracking-wide leading-6 ">Deeply engaged in an intensive, project-driven program focused on building modern, full-stack applications with React, Next.js, Node.js, and advanced database concepts.</p>
                         </div>
                     </div>
                 </div>
@@ -37,7 +37,7 @@ export default function MyJourney() {
                          <div className="bg-[var(--darkColor)]/20 hover:bg-[var(--darkColor)]/40 border hover:border-[var(--greenYellowish)]/30 transition-all duration-300 border-white/10 rounded-lg p-6">
                             <p className="mb-2 text-left md:text-right"><span className="text-neutral-400">Previous Experience</span></p>
                             <p className="mb-2 text-left md:text-right"><span className="text-xl font-bold text-[var(--greenYellowish)]">Creative & Technical Roots: FX Artist</span></p>
-                            <p className="text-sm text-left md:text-right">Specialized in creating complex simulations like fire, water, and particle systems. This role demanded deep technical problem-solving, and procedural generation to build efficient, reusable effects within tight production deadlines.</p>
+                            <p className="text-sm text-left md:text-right tracking-wide leading-6 ">Specialized in creating complex simulations like fire, water, and particle systems. This role demanded deep technical problem-solving, and procedural generation to build efficient, reusable effects within tight production deadlines.</p>
                         </div>
                     </div>
                 </div>
