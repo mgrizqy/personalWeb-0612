@@ -1,0 +1,237 @@
+@import "tailwindcss";
+
+
+
+@keyframes blip {
+  0% {
+    opacity: 1;
+  } 
+  50% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+
+}
+
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  } 
+  100% {
+    opacity: 0;
+  }
+
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(2.6);
+  } 
+
+
+
+
+}
+
+
+
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --darkColor : #1d1c22;
+  --grayishWhite : #e7e7e7;
+  --greenYellowish : #adff30;
+
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background:  #111015;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "JetBrains Mono", sans-serif;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1.4px);
+  background-size: 25px 25px;
+   background-attachment: fixed; 
+
+}
+
+
+
+.hireButtonBox {
+
+  @apply md:h-[44px] md:w-[116px] bg-[var(--grayishWhite)] rounded-[5px] text-black flex items-center justify-center relative;
+  /* transform: skewX(-10deg); */
+
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+.glowingDot, .glowingDotpulse {
+
+  @apply  
+  w-[10px] 
+  h-[10px] 
+  bg-[var(--greenYellowish)] 
+  rounded-full 
+  absolute 
+  top-[-4px]
+  right-[-4px]
+ 
+
+  
+
+}
+
+.glowingDot {
+
+@apply z-1
+
+}
+
+.glowingDotpulse {
+ 
+  animation: scale 1s ease-out infinite, fade-out 1s ease-out infinite ;
+}
+
+.blip {
+
+  
+animation: blip 1s  infinite;
+
+}
+
+.blip2 {
+
+  
+animation: blip 2s  infinite;
+
+}
+
+.navTextColorHover {
+
+  @apply transition-all 
+
+  pb-2 
+  hover:text-[var(--greenYellowish)];
+
+}
+
+.Title {
+
+  @apply text-[80px] font-semibold mb-7;
+
+  line-height: 87px;
+  
+
+}
+
+.greenYellowish {
+
+@apply text-[var(--greenYellowish)] ;
+
+
+}
+
+.techStackBox {
+
+@apply  h-[120px] w-[120px] rounded-xl bg-gray-900 border-1 border-gray-700 hover:bg-[var(--greenYellowish)] transition-all   flex flex-col items-center justify-center gap-2
+    
+}
+
+
+/* Add to globals.css */
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-container {
+  position: relative;
+  width: 100vw;
+  max-width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow-x: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  cursor: grab;
+}
+
+.marquee-container.active-drag {
+    cursor: grabbing;
+    user-select: none;
+}
+
+.marquee-content {
+  display: flex;
+  width: max-content;
+  animation: marquee 60s linear infinite;
+}
+
+.marquee-reverse {
+    animation-direction: reverse;
+}
+
+.marquee-container:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+/* Add to globals.css */
+
+.form-input {
+  @apply w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white placeholder-gray-500 transition-colors duration-200;
+  @apply focus:outline-none focus:ring-2 focus:ring-[#adff30]/50 focus:border-[#adff30];
+   will-change: border-color, box-shadow;
+}
+
+.project-card-container {
+  will-change: transform, box-shadow;
+}
+
+/* Add to globals.css */
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Add these to your @layer utilities if you have one */
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out forwards;
+}
+.animate-scale-in {
+  animation: scale-in 0.3s ease-out forwards;
+
+
+}
+
+
+.testimonial-card-container {
+  will-change: transform;
+}
+
+
