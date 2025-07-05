@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono,JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import NavBar from "./components/NavBar";
-import SmoothScrollProvider from "./components/SmoothScrollProvider";
+import SmoothScrollProvider from "./components/SmoothScrollProvider"; {/* import */}
 
 // import { ReduxProvider } from "./temp/redux/provider";
 
@@ -38,7 +38,7 @@ export default function RootLayout({
       >
  
           <NavBar/>
-          <SmoothScrollProvider>
+          <SmoothScrollProvider>   {/* tambah ini */}
 
         {children}
 

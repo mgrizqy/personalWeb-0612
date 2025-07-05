@@ -33,8 +33,8 @@ export default function HeroSection() {
                             Download CV <ArrowRight size={20} />
                         </button>
                         <div className="flex gap-4">
-                            <a href="#" className="w-[45px] h-[45px] rounded-full border-2 flex items-center justify-center border-[#adff30] hover:bg-[#adff30] hover:text-black transition-all"><Github size={22} /></a>
-                            <a href="mailto:your.email@example.com" className="w-[45px] h-[45px] rounded-full border-2 flex items-center justify-center border-[#adff30] hover:bg-[#adff30] hover:text-black transition-all"><MailIcon size={22} /></a>
+                            <a href="https://github.com/mgrizqy" className="w-[45px] h-[45px] rounded-full border-2 flex items-center justify-center border-[#adff30] hover:bg-[#adff30] hover:text-black transition-all"><Github size={22} /></a>
+                            <a href="mailto:mgrizqy.work@gmail.com" className="w-[45px] h-[45px] rounded-full border-2 flex items-center justify-center border-[#adff30] hover:bg-[#adff30] hover:text-black transition-all"><MailIcon size={22} /></a>
                         </div>
                     </div>
                 </div>
