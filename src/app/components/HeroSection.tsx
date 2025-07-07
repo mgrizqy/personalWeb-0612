@@ -1,4 +1,3 @@
-// components/HeroSection.tsx
 
 import { ArrowRight, ChevronDown, Code, Github, MailIcon } from "lucide-react";
 import Image from "next/image";

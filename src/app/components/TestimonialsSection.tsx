@@ -1,11 +1,7 @@
 
 'use client';
 
-import { useRef } from 'react';
 import { MessageSquare } from 'lucide-react';
-import { useDraggableMarquee } from '../hooks/useDraggableMarquee';
-import { useMediaQuery } from '../hooks/useMediaQuery';
-// import { div } from 'framer-motion/client';
 
 
 const testimonials = [
@@ -14,21 +10,21 @@ const testimonials = [
         quote: "Eky is a proactive and highly skilled developer. Their ability to quickly grasp complex requirements and deliver clean, efficient code was instrumental to our project's success.",
         author: "Jane Doe",
         title: "Stranger 1"
-        // title: "Project Manager, TechCorp"
+       
     },
     {
         id: 2,
         quote: "Working with Eky was a fantastic experience. They have a keen eye for design and were able to translate our Figma mockups into a pixel-perfect, responsive reality.",
-        author: "John Smith",
+        author: "John Wick",
         title: "Sstranger 2"
-        // title: "Lead Designer, Innovate LLC"
+        
     },
     {
         id: 3,
         quote: "An incredibly fast learner and a great team player. Eky is always eager to tackle new challenges and contribute to a positive team environment. A true asset.",
         author: "Sam Wilson",
         title: "Stranger 3"
-        // title: "Senior Engineer, DevTeam"
+        
     }
 ];
 
@@ -44,14 +40,8 @@ const TestimonialCard = ({ quote, author, title }: { quote: string, author: stri
 );
 
 export default function TestimonialsSection() {
-    const marqueeRef = useRef<HTMLDivElement>(null);
 
-    const test: React.RefObject<HTMLDivElement> = marqueeRef as React.RefObject<HTMLDivElement>
-
-    // marqueeRef.current!.focus();
-    const isDragging = useDraggableMarquee(test);
-
-    const isDesktop = useMediaQuery(`(min-width : 768px)`)
+    
 
     const loopedTestimonials = [...testimonials, ...testimonials];
 
@@ -61,11 +51,10 @@ export default function TestimonialsSection() {
                 <h2 className="text-5xl font-bold mb-16">What <span className="text-[#adff30]">Others Say</span></h2>
             </div>
 
-            {isDesktop ? (
 
                 <div
-                    ref={marqueeRef}
-                    className={`marquee-container ${isDragging ? 'active-drag' : ''}`}
+
+                    className={`marquee-container hidden md:block`}
                 >
                     <div className="marquee-content marquee-reverse">
                         {loopedTestimonials.map((testimonial, index) => (
@@ -78,10 +67,10 @@ export default function TestimonialsSection() {
                         ))}
                     </div>
                 </div>
-            ) : (
+   
 
 
-                <div className='grid grid-rows-3 justify-center gap-7'>
+                <div className='grid grid-rows-3 justify-center gap-7 md:hidden'>
 
                     {testimonials.map((testimonial, index) =>
                         <TestimonialCard
@@ -100,7 +89,6 @@ export default function TestimonialsSection() {
                 </div>
 
 
-            )}
 
 
         </section>

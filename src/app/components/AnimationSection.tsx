@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Transition } from 'framer-motion';
-import { useMediaQuery } from '../hooks/useMediaQuery';
+
 
 const variants = {
   fadeUp: {
@@ -42,12 +42,11 @@ export default function AnimatedSection({
 }: AnimatedSectionProps) {
 
 
- const isMobile = useMediaQuery('(max-width: 768px)');
 
   const viewportSettings = {
     once: false,
   
-    amount: isMobile ? 0.1 : 0.65, 
+    amount: 0.25, 
   };
 
 

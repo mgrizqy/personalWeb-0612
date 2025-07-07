@@ -18,7 +18,7 @@ export default function ContactSection() {
             <div className="max-w-3xl mx-auto bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm">
                 
                
-                <form action="https://formspree.io/f/YOUR_UNIQUE_ID" method="POST">
+                <form action="" method="POST">
 
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">

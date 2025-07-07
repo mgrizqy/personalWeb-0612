@@ -2,7 +2,7 @@
 
 import ProjectCard from './ProjectCard';
 import { useState } from 'react';
-import { ProjectDetailModal } from './ProjectDetailModal';
+// import { ProjectDetailModal } from './ProjectDetailModal';
 
 interface Project  {
 
