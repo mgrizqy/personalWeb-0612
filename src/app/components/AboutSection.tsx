@@ -1,6 +1,20 @@
-import { ArrowRight, Briefcase,GraduationCap, Code, Eye, Footprints, Map, Target } from "lucide-react"
+import {
+  ArrowRight,
+  Briefcase,
+  GraduationCap,
+  Code,
+  Eye,
+  Target,
+} from "lucide-react";
 
-import { SiGit, SiNextdotjs, SiNodedotjs, SiReact, SiTailwindcss, SiTypescript } from "react-icons/si";
+import {
+  SiGit,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiReact,
+  SiTailwindcss,
+  SiTypescript,
+} from "react-icons/si";
 import TechStackCard from "./TechStackCard";
 import ValueCard from "./ValueCard";
 
@@ -9,142 +23,116 @@ import { MdLabelImportant } from "react-icons/md";
 import TimelineItem from "./TimelineItem";
 import AnimatedSection from "./AnimationSection";
 
-
-
-const journeyData = [
-    {
-        icon: GraduationCap,
-        subtitle: "Current",
-        title: "Transition to Tech: Full-Stack Bootcamp",
-        description: "Deeply engaged in an intensive, project-driven program focused on modern full-stack applications with React, Next.js, and Node.js."
-    },
-    {
-        icon: Briefcase,
-        title: "Creative & Technical Roots: FX Artist",
-        subtitle: "Previous Experience",
-        description: "Specialized in creating complex simulations like fire, water, and particles, demanding deep technical problem-solving and procedural generation."
-    }
-];
+// const journeyData = [
+//     {
+//         icon: GraduationCap,
+//         subtitle: "Current",
+//         title: "Transition to Tech: Full-Stack Bootcamp",
+//         description: "Deeply engaged in an intensive, project-driven program focused on modern full-stack applications with React, Next.js, and Node.js."
+//     },
+//     {
+//         icon: Briefcase,
+//         title: "Creative & Technical Roots: FX Artist",
+//         subtitle: "Previous Experience",
+//         description: "Specialized in creating complex simulations like fire, water, and particles, demanding deep technical problem-solving and procedural generation."
+//     }
+// ];
 
 const techSkills = [
-
-    { icon: SiTypescript, title: "Typescript" },
-    { icon: SiReact, title: "React" },
-    { icon: SiNextdotjs, title: "Next.js" },
-    { icon: SiTailwindcss, title: "Tailwind\nCSS" },
-    { icon: SiNodedotjs, title: "Node.js" },
-    { icon: SiGit, title: "Git" },
-
-]
+  { icon: SiTypescript, title: "Typescript" },
+  { icon: SiReact, title: "React" },
+  { icon: SiNextdotjs, title: "Next.js" },
+  { icon: SiTailwindcss, title: "Tailwind\nCSS" },
+  { icon: SiNodedotjs, title: "Node.js" },
+  { icon: SiGit, title: "Git" },
+];
 
 const AboutSection = () => {
+  return (
+    <section id="about" className=" py-24">
+      <AnimatedSection>
+        <div className="w-full max-w-5xl mx-auto   ">
+          <h2 className="mb-2 text-center">
+            <span className="text-[var(--greenYellowish)] font-bold ">
+              INTRODUCTION
+            </span>
+          </h2>
+          <h3 className="text-5xl font-bold text-center mb-20">About Me</h3>
 
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-12 items-center ">
+            <div className="md:col-span-2 relative w-full  h-80 md:h-[225px] group flex items-center justify-center ">
+              <div className="absolute w-[85%] h-[85%] rounded-lg border-2 border-dashed border-[var(--greenYellowish)]/25 transition-all duration-300 rotate-3 group-hover:rotate-6 z-10"></div>
 
+              <div
+                className="absolute w-[85%] h-[85%] rounded-lg  bg-cover bg-center bg-gray-900 shadow-2xl transition-all duration-300 -rotate-3 group-hover:-rotate-1 z-0"
+                style={{ backgroundImage: "url('/illustration-dark.png')" }}
+              ></div>
+            </div>
 
-    return (
-
-        <section id="about" className=" py-24" >
-
-        <AnimatedSection>
-
-            <div className="w-full max-w-5xl mx-auto   " >
-
-                <h2 className="mb-2 text-center">
-                    <span className="text-[var(--greenYellowish)] font-bold ">
-                        INTRODUCTION
-                    </span>
-                </h2>
-                <h3 className="text-5xl font-bold text-center mb-20">
-                    About Me
-                </h3>
-
-
-
-                <div className="grid grid-cols-1 md:grid-cols-5 gap-12 items-center ">
-
-                    <div className="md:col-span-2 relative w-full  h-80 md:h-[225px] group flex items-center justify-center ">
-
-                        <div className="absolute w-[85%] h-[85%] rounded-lg border-2 border-dashed border-[var(--greenYellowish)]/25 transition-all duration-300 rotate-3 group-hover:rotate-6 z-10"></div>
-                       
-                        <div className="absolute w-[85%] h-[85%] rounded-lg  bg-cover bg-center bg-gray-900 shadow-2xl transition-all duration-300 -rotate-3 group-hover:-rotate-1 z-0"
-                            style={{ backgroundImage: "url('/illustration-dark.png')" }}>
-
-                        </div>
-
-                    </div>
-
-
-
-
-                    <div className="md:col-span-3 ">
-
-                        <h3 className="text-3xl font-bold text-white mb-4" >A Developer Focused on Impact & User Experience</h3>
-                        <p className="text-gray-300 leading-8 mb-6">
-                            {`I'm full-stack developer driven by a passion for solving complex problems. My journey into tech started with a deep curiosity for programming,
+            <div className="md:col-span-3 ">
+              <h3 className="text-3xl font-bold text-white mb-4">
+                A Developer Focused on Impact & User Experience
+              </h3>
+              <p className="text-gray-300 leading-8 mb-6">
+                {`I'm full-stack developer driven by a passion for solving complex problems. My journey into tech started with a deep curiosity for programming,
                             computer science and videogame, and it has evolved into a drive to build beautiful, intuitive applications that provide real-world value.`}
-                        </p>
-                        <a href="#contact" className="font-bold text-[var(--greenYellowish)] hover:underline flex items-center gap-2 transition-all hover:gap-4">
-                            Let&apos;s Connect <ArrowRight size={16} />
-                        </a>
-
-                    </div>
-
-                </div>
-
+              </p>
+              <a
+                href="#contact"
+                className="font-bold text-[var(--greenYellowish)] hover:underline flex items-center gap-2 transition-all hover:gap-4"
+              >
+                Let&apos;s Connect <ArrowRight size={16} />
+              </a>
             </div>
-            </AnimatedSection>
-            <AnimatedSection>
+          </div>
+        </div>
+      </AnimatedSection>
+      <AnimatedSection>
+        <div className="flex flex-col items-center mb-15 mt-30 md:mb-0">
+          <h3 className="mb-14 text-3xl font-bold flex items-center gap-5">
+            {" "}
+            <Code className="text-[var(--greenYellowish)] " /> My Tech Stack
+          </h3>
+          <div className="grid grid-rows-2 grid-cols-3 gap-5 md:grid-cols-6 md:gap-5">
+            {techSkills.map((stack) => (
+              <TechStackCard
+                key={stack.title}
+                title={stack.title}
+                icon={stack.icon}
+              ></TechStackCard>
+            ))}
+          </div>
+        </div>
+      </AnimatedSection>
 
-            <div className='flex flex-col items-center mb-15 mt-30 md:mb-0'>
-                <h3 className='mb-14 text-3xl font-bold flex items-center gap-5'> <Code className="text-[var(--greenYellowish)] " /> My Tech Stack</h3>
-                <div className='grid grid-rows-2 grid-cols-3 gap-5 md:grid-cols-6 md:gap-5'>
-                    {techSkills.map((stack) =>
+      <AnimatedSection>
+        <div className="flex flex-col items-center ">
+          <div className="flex items-center justify-center gap-5 mb-14">
+            <MdLabelImportant
+              size={30}
+              className="text-[var(--greenYellowish)] "
+            ></MdLabelImportant>
+            <h3 className=" text-3xl font-bold flex items-center gap-5">
+              {" "}
+              My Key Values
+            </h3>
+          </div>
 
-
-                        <TechStackCard key={stack.title} title={stack.title} icon={stack.icon}></TechStackCard>
-
-                    )}
-                </div>
-            </div>
-
-            </AnimatedSection>
-
-            <AnimatedSection>
-            <div className='flex flex-col items-center '>
-                <div className="flex items-center justify-center gap-5 mb-14">
-                    <MdLabelImportant size={30} className="text-[var(--greenYellowish)] "></MdLabelImportant>
-                    <h3 className=' text-3xl font-bold flex items-center gap-5'>  My Key Values</h3>
-                </div>
-
-                <div className='w-[67%]  md:min-w-[800px] grid grid-cols-1 md:grid-cols-2 mb-20 ' >
-
-                    <div className='col-span-1  flex items-center justify-center p-2'>
-
-
-
-                        <ValueCard icon={Eye} title='Attention to detail'/>
-
-
-
-                    </div>
-
-                    <div className='col-span-1  flex items-center justify-center p-2'>
-
-
-                        <ValueCard icon={Target} title='Dedicated Problem Solver' />
-
-
-                    </div>
-
-                </div>
-
+          <div className="w-[67%]  md:min-w-[800px] grid grid-cols-1 md:grid-cols-2 mb-20 ">
+            <div className="col-span-1  flex items-center justify-center p-2">
+              <ValueCard icon={Eye} title="Attention to detail" />
             </div>
 
-            </AnimatedSection>
+            <div className="col-span-1  flex items-center justify-center p-2">
+              <ValueCard icon={Target} title="Dedicated Problem Solver" />
+            </div>
+          </div>
+        </div>
+      </AnimatedSection>
 
-            <SectionDivider></SectionDivider>
+      <SectionDivider></SectionDivider>
 
-            {/* <div className="flex items-center justify-center mb-14 gap-5">
+      {/* <div className="flex items-center justify-center mb-14 gap-5">
                 <Footprints className="text-[var(--greenYellowish)]"></Footprints>
                 <h3 className="text-3xl font-bold  ">My Journey</h3>
             </div>
@@ -202,15 +190,11 @@ const AboutSection = () => {
                 </div>
 
             </div> */}
-<AnimatedSection>
+      <AnimatedSection>
+        <TimelineItem></TimelineItem>
+      </AnimatedSection>
 
-            <TimelineItem></TimelineItem>
-
-            </AnimatedSection>
-
-
-
-            {/* <div className="flex flex-col items-center mt-0 relative">
+      {/* <div className="flex flex-col items-center mt-0 relative">
 
                 <h3 className="text-3xl font-bold mb-14">My Journey</h3>
 
@@ -243,14 +227,8 @@ const AboutSection = () => {
                     </div>
 
             </div> */}
+    </section>
+  );
+};
 
-
-
-
-        </section>
-
-    )
-
-}
-
-export default AboutSection
+export default AboutSection;

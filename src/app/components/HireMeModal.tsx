@@ -12,14 +12,14 @@ interface HireMeModalProps {
 }
 
 export default function HireMeModal({ isOpen, onClose }: HireMeModalProps) {
-  if (!isOpen) {
-    return null;
-  }
-
   const form = useRef<HTMLFormElement>(null);
 
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
   const [status, setStatus] = useState<FormStatus>("IDLE");
+
+  if (!isOpen) {
+    return null;
+  }
 
   const handleHireSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
