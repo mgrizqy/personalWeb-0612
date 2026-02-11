@@ -107,9 +107,9 @@ export default function Navbar() {
           </div>
 
           <div className="md:hidden flex items-center gap-4">
-            <div className="w-[40px] h-[40px] border border-white/20 flex items-center justify-center rounded-full cursor-pointer hover:bg-white/10 transition-colors">
+            {/* <div className="w-[40px] h-[40px] border border-white/20 flex items-center justify-center rounded-full cursor-pointer hover:bg-white/10 transition-colors">
               <Sun size={20} />
-            </div>
+            </div> */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="z-50 w-8 h-8 flex flex-col items-end justify-center gap-[6px] group"
